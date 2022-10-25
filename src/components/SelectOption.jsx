@@ -18,7 +18,12 @@ function SelectOption() {
           let copy = { ...response.data.data };
           // console.log(copy);
           setData(copy);
+
+          let titleCopy = [...response.data.data.titleList];
+          setTitleList(titleCopy);
+
           console.log(copy);
+          console.log(titleCopy);
         })
         .catch((error) => {
           console.log(error);
@@ -28,25 +33,19 @@ function SelectOption() {
     }
   }
 
-  console.log(data.titleList);
+  console.log(data);
+  console.log(titleList);
 
-  //     let copy = { ...data.data };
-  //     console.log(copy);
-  //     setData(copy);
-  //     console.log(data);
-
-  // 페이지 마운트 시에 titleList 렌더링되고, title값(option태그) 가져오기
+  // 페이지 마운트 시에 렌더링되고, API의 title값(option태그) 가져오기
   useEffect(() => {
     getData();
-
-    // setTitleList(data);
   }, []);
 
   return (
     <div className='selectbox'>
-      {/* {titleList.map((title, i) => {
+      {titleList.map((title, i) => {
         return <Title title={title} i={i} />;
-      })} */}
+      })}
     </div>
   );
 }
