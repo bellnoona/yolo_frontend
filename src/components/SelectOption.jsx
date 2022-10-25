@@ -35,6 +35,7 @@ function SelectOption() {
 
   console.log(data);
   console.log(titleList);
+  console.log(titleList[0]);
 
   // 페이지 마운트 시에 렌더링되고, API의 title값(option태그) 가져오기
   useEffect(() => {
@@ -42,7 +43,7 @@ function SelectOption() {
   }, []);
 
   return (
-    <div className='selectbox'>
+    <div>
       {titleList.map((title, i) => {
         return <Title title={title} i={i} />;
       })}

@@ -3,7 +3,7 @@ import React from 'react';
 function Title({ title, i }) {
   return (
     <select>
-      <option>{title[i]}</option>
+      <option>{title}</option>
     </select>
   );
 }
