@@ -1,0 +1,11 @@
+@import url('../font.css');
+
+:root {
+  --black: #212121;
+  --yellow: #ffbb2f;
+  --light-gray: #dedede;
+  --red: #eb5757;
+  --dark-gray: #767676;
+  --light-gray: #c4c4c4;
+  --green: #00b890;
+}
