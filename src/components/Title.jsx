@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Title({ title, i }) {
+function Title({ title }) {
   return (
     <select>
       <option>{title}</option>
